@@ -34,7 +34,6 @@ class CreateInvoicesTable extends Migration
             $table->integer('product_qty')->nullable()->default(1);
             $table->decimal('total_amount_without_tax', 9,2)->nullable();
             $table->decimal('total_amount_with_tax', 9,2)->nullable();
-            $table->text('tracking_code')->nullable();
             $table->timestamps();
         });
     }

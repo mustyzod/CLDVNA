@@ -15,6 +15,16 @@ class CreateGatewaysTable extends Migration
     {
         Schema::create('gateways', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('paypal_active')->nullable()->default(1);
+            $table->string('paypal_client_id')->nullable();
+            $table->string('paypal_client_secret')->nullable();
+            $table->boolean('stripe_active')->nullable()->default(1);
+            $table->string('stripe_publishable_key')->nullable();
+            $table->string('stripe_secret_key')->nullable();
+            $table->boolean('voguepay_active')->nullable()->default(1);
+            $table->string('voguepay_merchant_id')->nullable();
+            $table->boolean('bankwire_active')->nullable()->default(1);
+            $table->boolean('main_balance_active')->nullable()->default(1);
             $table->timestamps();
         });
     }
