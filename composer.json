@@ -26,6 +26,9 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "files": [
+            "app/cloudavanaMain.php"
+        ],
     "extra": {
         "laravel": {
             "dont-discover": []
