@@ -14,4 +14,5 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+// Route::get('/first', 'Admin\AdminController@index');
 Route::view('/{path?}', 'app');
