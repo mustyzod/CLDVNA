@@ -5,13 +5,8 @@
 
     const Header = () => ( <
         nav className = 'navbar navbar-expand-md navbar-light navbar-laravel' >
-        <
-        div className = 'container' >
-        <
-        Link className = 'navbar-brand'
-        to = '/' > CLOUDAVANA < /Link> < /
-        div > <
-        /nav>
+        <div className = 'container' >
+        <Link className = 'navbar-brand' to = '/' > CLOUDAVANA < /Link> < /div > </nav>
     )
 
     export default Header

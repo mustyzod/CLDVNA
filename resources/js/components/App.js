@@ -6,6 +6,7 @@
     import Header from './Header';
     import NewProduct from './NewProduct';
     import ProductsList from './ProductsList';
+    import AdminDashboard from '.adminDashboard/AdminDashboard';
 
     class App extends Component {
         render() {
@@ -14,6 +15,7 @@
                 <Header/>
                 <Switch>
                     <Route exact path='/' component={ProductsList} />
+                    <Route path='/admincp' component={AdminDashboard} />
                     <Route path='/create' component={NewProduct} />
                 </Switch>
                 </div> </BrowserRouter >
