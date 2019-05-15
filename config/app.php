@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         
+        
         /*
          * Package Service Providers...
          */
@@ -227,6 +228,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+
+        'jwt-auth' => \App\Http\Middleware\jwtMiddleware::class,
+        'api-header' => \App\Http\Middleware\API::class,
 
     ],
 

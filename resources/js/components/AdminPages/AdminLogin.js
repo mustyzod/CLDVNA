@@ -1,19 +1,43 @@
 import React, { Component } from 'react'
 import { Container,Col } from 'reactstrap';
+import { allSettled } from 'q';
+import { PropTypes } from 'prop-types';
 
 class AdminLogin extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {
+      email : '',
+      password : '',
+      checkAuth:false,
+      warning:null,
+    };
+
+  //   this.state = {
+  //     isLoggedIn: false,
+  //     user: {},
+  //     value: '',
+  //     email:'',
+  //     password:''
+  //  };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChange (e) {
+    // const name=e.target.name;
+    // for checkbox
+    // const value = target.type === 'checkbox' ? target.checked : target.value;
+    // const value=e.target.value.toUpperCase();
+    // const value=e.target.value;
+    this.setState({
+        [e.target.name]:e.target.value
+      }
+    );
+    // console.log(this.state);
   }
 
-  handleSubmit(event) {
+  handleSubmit(e){
       axios.get('/api/first')
         .then(res => {
           const persons = res.data;
@@ -21,11 +45,12 @@ class AdminLogin extends Component {
           // this.setState({ persons });
         })
     // alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+    e.preventDefault();
   }
 
 
-  render() {
+
+  render() { 
     return (
       <React.Fragment>
         <Container>
@@ -39,10 +64,25 @@ class AdminLogin extends Component {
                     <form acceptCharset="UTF-8" role="form"  onSubmit={this.handleSubmit}>
                             <fieldset>
                         <div className="form-group">
-                          <input className="form-control" style={InputStyle} placeholder="E-mail" name="email" type="text" value={this.state.value} onChange={this.handleChange}/>
+                          <input 
+                            className="form-control" 
+                            style={InputStyle} 
+                            placeholder="E-mail" 
+                            name="email" 
+                            type="text" 
+                            value={this.state.email} 
+                            onChange={this.handleChange}
+                          />
                       </div>
                       <div className="form-group">
-                        <input className="form-control" placeholder="Password" name="password" type="password" value={this.state.value} onChange={this.handleChange}/>
+                        <input 
+                          className="form-control" 
+                          placeholder="Password" 
+                          name="password" 
+                          type="password" 
+                          value={this.state.value} 
+                          onChange={this.handleChange}
+                        />
                       </div>
                       <div className="checkbox">
                           <label>

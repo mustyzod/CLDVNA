@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import {
   Collapse,
   Navbar,
@@ -28,11 +29,18 @@ class Header extends React.Component {
     });
   }
   render() {
+    let isLoggedInAuth;
+    if(this.props.checkAuth == false){
+      isLoggedInAuth = <NavLink>Sign in</NavLink>;
+    }
+    else{
+      isLoggedInAuth = <NavLink>Sign Out</NavLink>;
+    }
     return (
       <div>
         <Navbar color="blue" light expand="md">
             <Link to="/">
-              Cloudavana
+              CLOUDAVANA
             </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -41,9 +49,9 @@ class Header extends React.Component {
                 <NavLink>Cart</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink>Sign in</NavLink>
+                {isLoggedInAuth}
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
@@ -61,7 +69,7 @@ class Header extends React.Component {
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </Navbar>
