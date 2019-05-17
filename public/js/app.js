@@ -77507,6 +77507,7 @@ function (_Component) {
         className: "form-control",
         style: InputStyle,
         placeholder: "E-mail",
+        required: true,
         name: "email",
         type: "text",
         value: this.state.value,

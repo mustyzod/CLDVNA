@@ -39,7 +39,7 @@ class AdminLogin extends Component {
                     <form acceptCharset="UTF-8" role="form"  onSubmit={this.handleSubmit}>
                             <fieldset>
                         <div className="form-group">
-                          <input className="form-control" style={InputStyle} placeholder="E-mail" name="email" type="text" value={this.state.value} onChange={this.handleChange}/>
+                          <input className="form-control" style={InputStyle} placeholder="E-mail" required name="email" type="text" value={this.state.value} onChange={this.handleChange}/>
                       </div>
                       <div className="form-group">
                         <input className="form-control" placeholder="Password" name="password" type="password" value={this.state.value} onChange={this.handleChange}/>
@@ -69,6 +69,6 @@ const LoginStyle = {
 }
 
 const InputStyle = {
-  width:'350px',
+  width:'350px'
 }
 export default AdminLogin
