@@ -64,6 +64,7 @@ class AdminLogin extends Component {
                     <form acceptCharset="UTF-8" role="form"  onSubmit={this.handleSubmit}>
                             <fieldset>
                         <div className="form-group">
+<<<<<<< HEAD:resources/js/components/adminDashboard/AdminDashboard.js
                           <input 
                             className="form-control" 
                             style={InputStyle} 
@@ -73,6 +74,9 @@ class AdminLogin extends Component {
                             value={this.state.email} 
                             onChange={this.handleChange}
                           />
+=======
+                          <input className="form-control" style={InputStyle} placeholder="E-mail" required name="email" type="text" value={this.state.value} onChange={this.handleChange}/>
+>>>>>>> 06fc7074f78e2eb32889fdb388a5a18232aad22c:resources/js/components/AdminPages/AdminLogin.js
                       </div>
                       <div className="form-group">
                         <input 
@@ -109,6 +113,6 @@ const LoginStyle = {
 }
 
 const InputStyle = {
-  width:'350px',
+  width:'350px'
 }
 export default AdminLogin
