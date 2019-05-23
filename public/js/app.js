@@ -79697,7 +79697,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
-      loggedIn: true
+      loggedIn: false
     };
     return _this;
   }
@@ -79814,7 +79814,7 @@ function (_Component) {
         to: "/admincp"
       }, "Admin"), " |", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/about"
-      }, "About"));
+      }, " About"));
     }
   }]);
 

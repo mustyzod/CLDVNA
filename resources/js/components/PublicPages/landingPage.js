@@ -8,7 +8,7 @@ class landingPage extends Component {
         <h1 style={clouda}>CLOUDAVANA</h1>
         
         <Link to='/admincp'>Admin</Link> | 
-        <Link to='/about'>About</Link>
+        <Link to='/about'> About</Link>
       </div>
     )
   }
