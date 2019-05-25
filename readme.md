@@ -7,7 +7,7 @@ Buit with laravel and react js:
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within this bproject, please send an e-mail to the creator via [mustyzod@gmail.com](mailto:mustyzod@gmail.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project, please send an e-mail to the creator via [mustyzod@gmail.com](mailto:mustyzod@gmail.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
