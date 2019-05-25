@@ -7,7 +7,7 @@ Buit with laravel and react js:
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [mustyzod@gmail.com](mailto:mustyzod@gmail.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Laravel, please send an e-mail to the creator via [mustyzod@gmail.com](mailto:mustyzod@gmail.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
